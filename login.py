@@ -14,7 +14,7 @@ def getPassword():
 def rdpLogin():
     name = getUser()
     pw = getPassword()
-    cmd = "xfreerdp /v:192.168.0.170:3389 /u:{} /p:{} /d:dbs4pos /f /drives /usb /multimon".format(name, pw)
+    cmd = "xfreerdp /v:IP_ADDRESS:PORT /u:{} /p:{} /d:DOMAIN /f /drives /usb /multimon".format(name, pw)
     print(cmd);
     subprocess.call([cmd], shell=True)
     
